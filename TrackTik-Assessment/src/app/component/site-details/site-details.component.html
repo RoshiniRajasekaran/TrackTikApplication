@@ -1,14 +1,14 @@
-<div class="container">
-     <div class="flex-row d-flex justify-content-center">
+<div class="flex-column d-flex justify-content-center">
+     <div class="flex-row  detail-hdr">
         <div class="col-md-10">
             <app-site-list-details [siteDetails] = "siteDetails"></app-site-list-details>
         </div>
         <div class="col-md-2">
-            <button class="btn btn-primary" (click)="goback()"> Back </button>
+            <button class="btn btn-back " (click)="goback()"> <i class="fas fa-chevron-circle-left"></i></button>
         </div>
      </div>
 <div class="container">
-     <div class="flex-row d-flex justify-content-center">
+     <div class="flex-row">
          <div class="col-4">
                 <ul class="fa-ul ">
                     <li><span class="fa-li"><i class="fas fa-user-alt"></i></span><b>{{siteDetails.contacts.main.firstName}} {{siteDetails.contacts.main.lastName}}</b></li>

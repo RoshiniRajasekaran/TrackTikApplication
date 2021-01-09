@@ -26,4 +26,13 @@ li{
     margin-bottom: 20px;
     float: left;
 }
+.btn-back .fas{
+    color:#51b8f5;
+    font-size:3em;
+}
+
+.detail-hdr {
+    margin-top:50px;
+    border-bottom: 1px solid #efefef;
+}
 

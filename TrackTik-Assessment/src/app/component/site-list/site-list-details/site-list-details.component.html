@@ -1,9 +1,9 @@
-<div class="row" (click)="ShowMainContacts()">
-    <div class=" col-sm-4">
-        <img style="float:left; margin-bottom: 20px;" src="{{siteDetails.images[1]}}" width=100vw height=100vw class="rounded-circle">
+<div class="row detail-tile" (click)="ShowMainContacts()">
+    <div class=" col-2">
+        <img style="float:left; margin-bottom: 20px;" src="{{siteDetails.images[1]}}"  class="img-contact rounded-circle">
     </div>
-    <div class=" col-sm-6">
-        <div class="content-heading"><h3 >{{siteDetails.title}}</h3></div>
+    <div class=" col-8">
+        <div class="content-heading"><h3>{{siteDetails.title}}</h3></div>
         <p>{{siteDetails.address.street}}, {{siteDetails.address.city}}<br>
             {{siteDetails.address.state}}, {{siteDetails.address.country}}<br>
             Zipcode : {{siteDetails.address.zipCode}}</p>   
