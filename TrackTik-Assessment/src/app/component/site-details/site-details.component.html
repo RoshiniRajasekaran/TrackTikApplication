@@ -1,0 +1,32 @@
+<div class="container">
+     <div class="flex-row d-flex justify-content-center">
+        <div class="col-md-10">
+            <app-site-list-details [siteDetails] = "siteDetails"></app-site-list-details>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" (click)="goback()"> Back </button>
+        </div>
+     </div>
+<div class="container">
+     <div class="flex-row d-flex justify-content-center">
+         <div class="col-4">
+                <ul class="fa-ul ">
+                    <li><span class="fa-li"><i class="fas fa-user-alt"></i></span><b>{{siteDetails.contacts.main.firstName}} {{siteDetails.contacts.main.lastName}}</b></li>
+                    <li><span class="fa-li"></span>{{siteDetails.contacts.main.jobTitle}}</li>
+                    <li><span class="fa-li"><i class="fas fa-phone-alt"></i></span>{{siteDetails.contacts.main.phoneNumber}}</li>
+                    <li><span class="fa-li"><i class="fas fa-envelope"></i></span>{{siteDetails.contacts.main.email}}</li>
+                    <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>{{siteDetails.contacts.main.address.street}} {{siteDetails.contacts.main.address.city}}<br>
+                        {{siteDetails.contacts.main.address.state}}, {{siteDetails.contacts.main.address.country}}<br>
+                        Zipcode : {{siteDetails.contacts.main.address.zipCode}}</li>
+                </ul>
+            </div>
+         </div>
+    </div>
+</div>
+
+  
+
+
+
+
+

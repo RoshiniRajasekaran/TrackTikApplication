@@ -1,0 +1,22 @@
+
+@media screen and (max-width: 400px) {
+    .img-contact{
+       width:50vw;
+       height:50vw;
+   }
+}
+
+@media screen and (max-width: 600px) {
+    .img-contact{
+        width:70vw;
+        height:70vw;
+    }
+}
+
+.img-contact{
+    width:100vw;
+    height:100vw;
+}
+
+
+
