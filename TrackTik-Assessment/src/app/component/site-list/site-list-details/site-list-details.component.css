@@ -4,6 +4,13 @@
        width:50px;
        height:50px;
    }
+   .detail-tile h3{
+    font-size:12px!important;
+    }
+    .detail-tile p{
+        font-size:10px!important;
+        margin-bottom:7px;
+    }
 }
 
 @media only screen 
@@ -12,11 +19,25 @@ and (min-device-width: 600px) {
         width:70px;
         height:70px;
     }
+    .detail-tile h3{
+        font-size:14px!important;
+    }
+    .detail-tile p{
+        font-size:12px!important;
+        margin-bottom:7px;
+    }
 } 
 @media only  screen and (min-width: 768px) {
     .img-contact{
         width:100px;
         height:100px;
+    }
+    .detail-tile h3{
+        font-size:18px!important;
+    }
+    .detail-tile p{
+        font-size:16px !important;
+        margin-bottom:7px;
     }
 } 
 

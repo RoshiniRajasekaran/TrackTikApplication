@@ -1,15 +1,18 @@
-<div class="flex-column d-flex justify-content-center">
-     <div class="flex-row  detail-hdr">
-        <div class="col-md-10">
-            <app-site-list-details [siteDetails] = "siteDetails"></app-site-list-details>
+<div class="flex-column">
+     <div class="row justify-content-center detail-hdr">
+        <div class="col-10 site-detail-content">
+          <app-site-list-details [siteDetails] = "siteDetails"></app-site-list-details>
+
         </div>
-        <div class="col-md-2">
+        <div class="col-2"> 
             <button class="btn btn-back " (click)="goback()"> <i class="fas fa-chevron-circle-left"></i></button>
         </div>
      </div>
-<div class="container">
-     <div class="flex-row">
-         <div class="col-4">
+<div class="row justify-content-center detail-hdr">
+     <div class="col-10 site-detail-content">
+         <div style="height:100px;">
+            
+         </div>   
                 <ul class="fa-ul ">
                     <li><span class="fa-li"><i class="fas fa-user-alt"></i></span><b>{{siteDetails.contacts.main.firstName}} {{siteDetails.contacts.main.lastName}}</b></li>
                     <li><span class="fa-li"></span>{{siteDetails.contacts.main.jobTitle}}</li>
@@ -19,7 +22,6 @@
                         {{siteDetails.contacts.main.address.state}}, {{siteDetails.contacts.main.address.country}}<br>
                         Zipcode : {{siteDetails.contacts.main.address.zipCode}}</li>
                 </ul>
-            </div>
          </div>
     </div>
 </div>

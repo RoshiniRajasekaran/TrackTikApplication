@@ -1,22 +1,8 @@
-.row{
-   /* margin-left: 27%;
-    margin-top:5%;*/
-}
-.container{
-   /* margin-left: 27%;
-    margin-top:5%;
-    width:40%;
-    box-sizing: border-box;
-    border: 1px solid #000;*/
-}
-.card {
-    
+.card {    
     float: none;
     width:38%; 
     margin-left:10%;
     margin-top:10%;
-  
-
 }
 ul{
     margin-left:5%;
@@ -24,15 +10,45 @@ ul{
 
 li{
     margin-bottom: 20px;
-    float: left;
 }
 .btn-back .fas{
     color:#51b8f5;
-    font-size:3em;
+    font-size:7vmin;
 }
 
 .detail-hdr {
     margin-top:50px;
     border-bottom: 1px solid #efefef;
+    padding:0 2%;
 }
+
+.site-detail-content {
+    max-width:900px;
+}
+
+
+@media only screen and (min-width: 200px) {
+    
+    .site-detail-content{
+        font-size:12px!important;
+    }
+}
+
+@media only screen 
+and (min-device-width: 600px) {
+    .site-detail-content li{
+        font-size:14px!important;
+    }
+} 
+@media only  screen and (min-width: 768px) {
+    .site-detail-content li{
+        font-size:16px!important;
+    }
+} 
+
+.site-detail-content li{
+    font-size:12px;
+}
+
+
 
