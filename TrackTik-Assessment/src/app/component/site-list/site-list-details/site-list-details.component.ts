@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import {ClientSites} from 'src/app/Model/model';
 
 @Component({
   selector: 'app-site-list-details',
@@ -8,18 +8,12 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class SiteListDetailsComponent implements OnInit {
 
-  @Input() siteDetails :any;
-  constructor(private router: Router) { }
+  @Input() siteDetails :ClientSites;
+  constructor() { }
 
   ngOnInit(): void {
   }
-  ShowMainContacts(){
-    const navigationExtras : NavigationExtras = {
-      state : {
-        data: this.siteDetails
-      }
-    }
-    this.router.navigate(['/site-details'],navigationExtras)
-   // this.requestdetails.emit(this.Details);
-  }
+  
+  
+  
 }
