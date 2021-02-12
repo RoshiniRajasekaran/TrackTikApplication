@@ -1,7 +1,7 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
-import{ClientService} from '../../client.service';
-import{ClientSites} from '../../Model/Client';
-import { Router } from '@angular/router';
+import { Component, OnInit,Input} from '@angular/core';
+import{ClientService} from '../../service/client.service';
+import{ClientSites} from '../../Model/model';
+import { Router, NavigationExtras } from '@angular/router';
 
 
 @Component({
@@ -11,21 +11,38 @@ import { Router } from '@angular/router';
 })
 export class SiteListComponent implements OnInit {
   data:ClientSites[];
-  Details:boolean=false;
-  constructor(private clients:ClientService) { 
+  filterdata:string;
+  @Input() siteDetails :ClientSites;
+
+  constructor(private clientservice:ClientService , private router:Router) { 
   }
   ngOnInit(): void {
     
-    this.clients.getdata().subscribe((ClientSites)=>{
-      this.data=ClientSites
+    //calling clientservice to fetch data
+
+    this.clientservice.getSitesdata().subscribe((ClientSites)=>{
+      this.data=ClientSites;
       console.log(this.data[0]);
     })
   }
-
   
- 
 
+  //getting data from route NavigationExtras
+
+  ShowMainContacts(d:ClientSites){
+    const navigationExtras : NavigationExtras = {
+      state : {
+        data: d
+      }
+    }
+
+    //navigating to site-details page
+    this.router.navigate(['/site-details'],navigationExtras)
+    console.log(this.siteDetails);
+  }
 }
+
+
 
 
 

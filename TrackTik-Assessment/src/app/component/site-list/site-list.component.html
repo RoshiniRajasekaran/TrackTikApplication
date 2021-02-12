@@ -1,9 +1,25 @@
-<div class="container" style="margin-top:50px">
-    <div class="overflow-hidden" *ngFor="let d of data">
-        <app-site-list-details [siteDetails] = d></app-site-list-details>
-        <hr>
+<div class="container main-page">
+    <div class="row">
+         <div class="col-md-10">
+                <div class="overflow-hidden" *ngFor="let d of data | filter:filterdata">
+                    <div class="col">
+                        <button class="btn btn-back  btn-arrow" (click)="ShowMainContacts(d)"> <i class="fas fa-chevron-circle-right"></i></button>
+                        <app-site-list-details [siteDetails] = d></app-site-list-details>
+                    </div>
+                    <hr>
+                </div>
+        </div>
+            <div class="col-md-2">
+                <div class="form-group ">  
+                     <input type="text" class="form-control" placeholder="Search" [(ngModel)]="filterdata"> 
+                </div>
+            </div>
     </div>
 </div>
+
+
+
+
 
 
 
