@@ -16,8 +16,5 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(){}
 
-ParentEventHandler(details){
-  this.showDetailscreen=true;
-}
 
 }
